@@ -1,0 +1,412 @@
+/* IMPORTING FONT AND ADDING BOILERPLATE CSS */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+	min-height: 100%;
+	color: #000;
+}
+
+body {
+    font-family: 'Roboto Slab', serif;
+	font-size: 1rem;
+    height: 125vh;
+    font-weight: 300;
+    margin: 0;
+}
+
+h1,
+h2,
+h3 {
+    font-weight: 400;
+}
+
+p {
+    hyphens: auto;
+    word-break: break-word;
+    text-align: justify;
+}
+
+img {
+    border: none;
+	max-width: 100%;
+}
+
+/* NAV MENU STYLING */
+
+header img {
+    height: 90px;
+    margin-left: 40px;
+}
+
+header {
+    position: fixed;
+    background-color:#FF9770;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 0 25px 0 black;
+    z-index: 999;
+}
+
+header * {
+    display: inline-flex;
+}
+
+header li {
+    margin: 20px;
+}
+
+header li a {
+    color: black;
+    text-decoration: none;
+}
+
+/* creating elements for the responsive burgermenu with checkbox */
+
+header input[type="checkbox"],
+header label {
+    display: none;
+}
+
+
+label {
+    margin: auto;
+    display: none;    
+}
+
+label img {
+    height: 30px;
+    width: 40px;
+    float: right;
+}
+
+
+
+/* INFO SECTION */
+
+.info {
+    background-image: url("cover.jpg");
+    height: 500px;
+    max-width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 250px;
+}
+
+#infotext {
+    margin:auto;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    color: rgb(0, 0, 0);
+    vertical-align: middle;
+    opacity: 0.9;
+    font-size: 2rem;
+}
+
+/* ABOUT SECTION */
+
+.about {
+    height: auto;
+    margin-top: 5%;
+    margin-left: 5%;
+    overflow: auto;
+    margin-right: 5%;
+}
+
+.about h2 {
+    padding-bottom: 2rem;
+    font-size: 1.5rem;
+    padding-left: 4rem;
+    background-color: #FFD670;
+}
+
+.container {
+	display: grid;
+	grid-template-columns: 450px 1fr;
+	gap: 1rem;
+	align-items: center;
+	max-width: 100%;
+	margin: 0 auto;
+}
+
+#imagestarwars img {
+	max-width: 100%;
+	height: auto;
+    width: 400px;
+}
+
+
+/* THE 'WHAT' SECTION */
+
+.events {
+    height: auto;
+    margin-top: 5%;
+    margin-left: 5%;
+    overflow: scroll;
+    margin-right: 5%;
+}
+
+.events h2 {
+    padding-bottom: 2rem;
+    font-size: 1.5rem;
+    padding-left: 4rem;
+    background-color: #FFD670;
+}
+
+.container1 {
+    display: grid;
+	grid-template-columns: 600px 1fr;
+	gap: 1rem;
+	align-items: center;
+	max-width: 100%;
+	margin: 0 auto;
+}
+
+.container1 img {
+    position: relative;
+    max-width: 100%;
+	height: auto;
+    object-fit: cover;
+}
+
+
+.container2 {
+    display: grid;
+	grid-template-columns: 600px 1fr;
+	gap: 1rem;
+	align-items: center;
+	max-width: 100%;
+	margin: 0 auto;
+}
+
+.container2 img {
+    max-width: 100%;
+	height: auto;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    
+}
+
+/* 'WE ARE' SECTION */
+
+.weare {
+    height: auto;
+    margin-top: 5%;
+    margin-left: 5%;
+    overflow: auto;
+    margin-right: 5%;
+}
+
+.weare h2 {
+    padding-bottom: 2rem;
+    font-size: 1.5rem;
+    padding-left: 4rem;
+    background-color: #FFD670;
+}
+
+.founders {
+    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.founders img {
+    display: flex;
+    height: 200px;
+    width: auto;
+}
+
+#tammie {
+    background-color: #70D6FF;
+    display: flex;
+    flex-direction: row;
+}
+
+
+#josh {
+    background-color: #E9FF70;
+    display: flex;
+    flex-direction: row;
+}
+
+
+#kyle {
+    background-color: #FFD670;
+    display: flex;
+    flex-direction: row;
+}
+
+
+#mia {
+    background-color: #FF70A6;
+    display: flex;
+    flex-direction: row;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    padding-top: 1rem;
+    padding-right: 1rem;
+}
+
+
+/* CONTACTS SECTION */
+
+.contacts {
+    height: auto;
+    max-width: 100%;
+}
+
+.contacts h3 {
+    padding-bottom: 2rem;
+    font-size: 1.5rem;
+    background-color: #70D6FF;
+    text-align: center;
+}
+
+.contacts h4,
+p {
+    text-align: center;
+}
+
+
+
+
+/* MEDIALINKS */
+
+@media only screen and (max-width: 980px) {
+    /* here I am creating a logic for the responsive burgermenu in small screens with the help of checkbox  (if the checkbox is not checked, menu won't appear) */
+    input[type="checkbox"]:not(:checked) + ul {
+        display: none;
+    }
+
+
+    header {
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    
+
+    header label {
+        position: fixed;
+        top: 1rem;
+        right: 1rem;
+        text-align: right;
+        display: block;
+        padding: 0.5em;
+        line-height: 1.6em;
+        align-self: center;
+    }
+
+    header ul {
+        display: block;
+    }
+
+    header ul li {
+        margin-bottom: 0;
+        width: 100%;
+        text-align: right;
+        padding: 0.5em;
+    }
+
+
+    h1 {
+        font-size: 2rem;
+    }
+
+
+}
+
+@media (max-width: 980px) {
+    .container {
+      display: block;
+      font-size: 80%;
+    }
+    .container p {
+        background-color: #FFD670;
+        position: relative;
+        margin: -3rem 0 2rem 1rem;
+        padding: 1rem;
+    }
+
+    .container1 {
+        display: block;
+        font-size: 80%;
+    }
+      
+    .container1 p {
+        background-color: #70D6FF;
+        position: relative;
+        margin: auto;
+        padding: -3rem 0 2rem 1rem;
+    }
+
+    .container2 {
+        display: block;
+        font-size: 80%;
+    }
+    
+    .container2 p {
+        background-color: #FF70A6;
+        position: relative;
+        margin: -3rem 0 2rem 1rem;
+        padding: 1rem;
+    }
+}        
+
+@media (max-width: 940px) {
+    .founders {
+        display: block;
+        text-align: center;
+        width: auto;
+    }
+
+    .founders img {
+        display: inline-block;
+        height: 200px;
+        width: auto;
+    }
+}
+
+
+@media (max-width: 540px) {
+    /* .text {
+        display: inline-block;
+
+    } */
+
+    .founders {
+        display: block;
+        font-size: 0.3 rem;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        padding-top: 1rem;
+    }
+
+    .text {
+        margin-top: 11rem;
+        text-align: center;
+        margin-left: -17rem;
+
+    }
+    
+    .founders img {
+        align-content:center;
+		margin-left: 5rem;
+        height: 200px;
+        width: auto;
+    }
+
+
+
+
+}
